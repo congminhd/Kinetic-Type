@@ -53,17 +53,17 @@ class Sentence{
   move(){
     //this.x+=random(-0.5,0.5);
     if (this.x<mouseX-0.15*width){
-      this.x+=random(0,4);
+      this.x+=random(0,7);
     }
     else{
-      this.x+=random(-4,0)
+      this.x+=random(-7,0)
     }
     //this.y+=random(-0.5,0.5);
     if (this.y<mouseY-0.2*height){
-      this.y+=random(0,4);
+      this.y+=random(0,7);
     }
     else{
-      this.y+=random(-4,0)
+      this.y+=random(-7,0)
     }
   }
   display(){
