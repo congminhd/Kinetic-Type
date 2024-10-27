@@ -40,11 +40,17 @@ textAlign(LEFT, TOP);
 text("Next", 0.9*width-25, 0.93*height, 0.1*width, 0.1*height);
 pop();
 let distance=(dist(0.9*width, 0.9*height, mouseX, mouseY));
-}
+
 if (distance<25){
   push();
   fill(255,0,0);
   circle (0.9*width, 0.9*height, 50);
   pop();
-
+}
+}
+function mousePressed() {
+  let distance=(dist(0.9*width, 0.9*height, mouseX, mouseY));
+  if (distance<25) {
+    window.open('https://congminhd.github.io/Kinetic-Type/brief2darkfinal/');
+  }
 }
