@@ -51,8 +51,18 @@ class Sentence{
     this.h=h;
   }
   move(){
-    this.x+=random(-0.5,0.5);
-    this.y+=random(-0.5,0.5);
+    this.x+=random(-2,2);
+    if (mouseX<this.x){
+      this.x+=random(0,1.5);
+    } else if (mouseX>this.x){
+      this.x-=random(0,1.5);
+    }
+    this.y+=random(-2,2);
+    if (mouseY<this.y){
+      this.y+=random(0,1.5);
+    } else if (mouseY>this.y){
+      this.y-=random(0,1.5);
+    }
   }
   display(){
     text(this.sentence, this.x, this.y, this.w, this.h);
@@ -78,11 +88,18 @@ function draw() {
   text("Return", 0.894*width-25, 0.93*height, 0.1*width, 0.1*height);
   pop();
   let distance=(dist(0.9*width, 0.9*height, mouseX, mouseY));
-}
+
 if (distance<25){
   push();
-  fill(255,0,0);
+  fill(255,255,255);
   circle (0.9*width, 0.9*height, 50);
+  text("Return", 0.894*width-25, 0.895*height, 0.1*width, 0.1*height);
   pop();
-
+}
+}
+function mousePressed() {
+  let distance=(dist(0.9*width, 0.9*height, mouseX, mouseY));
+  if (distance<25) {
+    window.open('https://congminhd.github.io/Kinetic-Type/brief2darkreturn/');
+  }
 }
