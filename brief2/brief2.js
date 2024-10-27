@@ -51,6 +51,6 @@ if (distance<25){
 function mousePressed() {
   let distance=(dist(0.9*width, 0.9*height, mouseX, mouseY));
   if (distance<25) {
-    window.open('https://congminhd.github.io/Kinetic-Type/brief2darkfinal/');
+    window.open('https://congminhd.github.io/Kinetic-Type/brief2next/');
   }
 }
